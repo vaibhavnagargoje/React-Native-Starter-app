@@ -37,16 +37,21 @@ const ActionCard = () => {
         <View style={styles.footerContainer}>
             <Text numberOfLines={3}>
                 
+                </Text>
                 <TouchableOpacity
                     onPress={()=>openWebsite('https://blog.learncodeonline.in/whats-new-in-javascript-21-es12')
 
                     }
                     >
-                    <Text>
+                    <Text style={styles.socialLinkks}>
                         Read More
                     </Text>
                 </TouchableOpacity>
-            </Text>
+                <TouchableOpacity>
+                    <Text style = {styles.socialLinkks}>
+                        Share now
+                    </Text>
+                </TouchableOpacity>
         </View>
       </View>
 
@@ -58,15 +63,62 @@ export default ActionCard
 
 const styles = StyleSheet.create({
     headingText:{
+        fontSize:24,
+        fontWeight:'bold',
+        paddingHorizontal:8
+    },
+    card:{
+        width:330,
+        height:370,
+        borderRadius:6,
+        marginVertical:12,
+        marginHorizontal:16,
 
     },
-    card:{},
-    elevatedCard:{},
-    headingcontainer:{},
-    headerText:{},
+    elevatedCard:{
+        backgroundColor:'#f3f',
+        elevation:3,
+        shadowOffset:{
+            width:1,
+            height:4,
+        },
+        shadowColor:'#333',
+        shadowOpacity:0.4,
+
+
+    },
+    headingcontainer:{
+        height:40,
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center',
+
+    },
+    headerText:{
+        color:'#000',
+        fontSize:18,
+        fontWeight:'600',
+
+    },
     cardImage:{
         height:200,
     },
-    bodyContainer:{},
-    footerContainer:{}
+    bodyContainer:{
+        padding:10
+    },
+    footerContainer:{
+        padding:8,
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'space-evenly'
+    },
+    socialLinkks:{
+        fontSize:16,
+        color:'#000',
+        backgroundColor:'#ffffff',
+        padding:8,
+        paddingHorizontal:20,
+        borderRadius:6,
+
+    }
 })
